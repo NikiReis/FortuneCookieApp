@@ -27,9 +27,13 @@ export default function App() {
   return (
     <View style={{backgroundColor: "white", flex: 1}}>
       <View style={style_header.app_name}>
-        <Text style={style_header.text_container}>Fortune Cookie</Text>
+      <Text style={style_header.text_container}>
+          <Image
+            source={require("./assets/fortune-cookie.png")}
+            style={{width: 33, height: 32, marginRight: 15}}/> Fortune Cookie
+      </Text>
       </View>
-
+    
       <View style={style_quote.container}>
         <TouchableOpacity onPress={CliqueImagem}>
           <Image
@@ -71,7 +75,7 @@ const style_header = StyleSheet.create({
   },
   text_container: {
     color: 'white',
-    fontSize: 30,
+    fontSize: 32,
     fontWeight: 'bold',
     left: 20,
   },
